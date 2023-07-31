@@ -17,16 +17,64 @@ class Coordinator {
     private func showMainScreen() {
         let viewController = MainViewController()
         viewController.onNext = { [weak self] in
-            self?.showMainScreen2()
+            self?.showQuiz1()
+            
         }
         navigationViewController.pushViewController(viewController, animated: true)
+       // navigationViewController.pushViewController(quizViewController, animated: true)
     }
     
-    private func showMainScreen2() {
-        let viewController = MainViewController()
+    private func showQuiz1() {
+        let viewController = QuizViewController()
         viewController.onNext = { [weak self] in
-            self?.showMainScreen()
+            self?.showQuiz2()
         }
+        viewController.questions = [
+            .init(
+                questionTitle: "Which city is on the picture?",
+                answersArray: ["Helsinki", "Tartu","Tampere","Vasa"],
+                imageName: "finland",
+                questionAsked: false
+            )
+//            .init(
+//                questionTitle: "Which city is on the picture?",
+//                answersArray: ["Hamburg", "Tallinn","Boston","Istambul"],
+//                imageName: "germany",
+//                questionAsked: false
+//            ),
+//            .init(
+//                questionTitle: "Which city is on the picture?",
+//                answersArray: ["Riga", "Vinus","Tallinn","London"],
+//                imageName: "latvia",
+//                questionAsked: false
+//            ),
+//            .init(
+//                questionTitle: "Which city is on the picture?",
+//                answersArray: ["Oslo", "Numberg", "sddeqdeq'","cdwcwvwece"],
+//                imageName: "norway",
+//                questionAsked: false
+//            )
+            
+        ]
         navigationViewController.pushViewController(viewController, animated: true)
+        
+    }
+    
+    private func showQuiz2() {
+        let viewController = QuizViewController()
+        viewController.onNext = { [weak self] in
+            self?.showQuiz1()
+        }
+        viewController.questions = [
+  
+            .init(
+                questionTitle: "Which city is on the picture?",
+                answersArray: ["Hamburg", "Tallinn","Boston","Istambul"],
+                imageName: "germany",
+                questionAsked: false
+            )
+        ]
+        navigationViewController.pushViewController(viewController, animated: true)
+        
     }
 }
