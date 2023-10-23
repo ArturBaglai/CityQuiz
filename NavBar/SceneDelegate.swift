@@ -24,6 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
+       
         
         coordinator = Coordinator(rootViewController: rootViewController)
         coordinator?.start()

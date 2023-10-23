@@ -1,0 +1,39 @@
+[
+    {
+        "questionId": 1,
+        "questionPoints": 5,
+        "questionTitle": "Which city is on the picture?",
+        "answersArray": ["Helsinki", "Tartu","Tampere","Vasa"],
+        "imageName": "finland",
+        "questionAsked": false,
+        "trueUnswer": 0
+    },
+    {
+        "questionId": 2,
+        "questionPoints": 5,
+        "questionTitle": "Which city is on the picture?",
+        "answersArray": ["Berlin", "Tallinn","Boston","Istambul"],
+        "imageName": "germany",
+        "questionAsked": false,
+        "trueUnswer": 0
+    },
+    {
+        "questionId": 3,
+        "questionPoints": 5,
+        "questionTitle": "Which city is on the picture?",
+        "answersArray": ["Riga", "Vinus","Tallinn","London"],
+        "imageName": "latvia",
+        "questionAsked": false,
+        "trueUnswer": 0
+    },
+    {
+        "questionId": 4,
+        "questionPoints": 5,
+        "questionTitle": "Which city is on the picture?",
+        "answersArray": ["Oslo", "Numberg", "Berlin","Moscow"],
+        "imageName": "norway",
+        "questionAsked": false,
+        "trueUnswer": 0
+    }
+]
+

@@ -6,15 +6,16 @@ class MainView: UIView {
     
     private let title: UILabel = {
         let view = UILabel()
-        view.text = "MyLABEL"
+        view.text = "Hello to city quiz application"
         view.textAlignment = .center
         view.font = .systemFont(ofSize: 50, weight: .bold)
+        view.numberOfLines = 0
         return view
     }()
     
     private let descriptionLabel: UILabel = {
         let view = UILabel()
-        view.text = "Description asdf asdf asdf asd fasdf  asdfasdfasa asd fasdf sd "
+        view.text = "Hello to city Quiz application"
         view.backgroundColor = .green
         view.textAlignment = .center
         view.font = .systemFont(ofSize: 14, weight: .bold)
@@ -23,7 +24,7 @@ class MainView: UIView {
         
     }()
     
-    private let button: UIButton = {
+    private lazy var button: UIButton = {
         let button = UIButton()
         button.backgroundColor = .blue
         button.setTitle("Next", for: .normal)
@@ -32,13 +33,10 @@ class MainView: UIView {
         button.addTarget(self, action: #selector(onClick), for: .touchUpInside)
         return button
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: .zero)
-        
         self.backgroundColor = .red
-        self.translatesAutoresizingMaskIntoConstraints = false
-        
         setupInitialLayout()
     }
     
